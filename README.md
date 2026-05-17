@@ -1,2 +1,0 @@
-# NikahYuk
-Untuk Web Nikah
