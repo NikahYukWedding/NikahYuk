@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adi & Fitri | Undangan Berbasis Web</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kanit:wght@300&family=Poppins:wght@600&family=Roboto+Slab:wght@300&display=swap"
+        rel="stylesheet">
+
+
+    <link href="../swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* body {
+            background-color: #a01742;
+        } */
+
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+    </style>
+
+    <!-- style pop up -->
+
+    <link rel="stylesheet" type="text/css" href="../lightbox.min.css">
+    <script src="../lightbox-plus-jquery.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+    <div id="close">
+        <div style="width: 100%; height: 100%; z-index: 99; position: fixed; background-image: url('../depositphotos_8962606-stock-photo-beautiful-wedding-background-with-roses.jpg'); background-size: cover;"
+            class="d-flex justify-content-center">
+            <div class="preload-contents" style="background-image: url('../BgWedJitun3.jpg');
+        background-size: cover;">
+
+                <div class="wave text-center">
+                    <p>The Wedding Of</p>
+
+                    <p class="preload-nama">Adi &
+                        Fitri
+                    </p>
+
+                    <p class="hari" style="line-height: 5px;">
+                        Kamis
+                    </p>
+                    <p style="line-height: 5px;">
+                        28 Mei 2026
+                    </p>
+
+                    <p class="diundang">
+                        <b style="font-family: 'Dancing Script', cursive;">Mas Utsman</b>
+                    </p>
+
+                    <audio class="d-none" controls loop id="autoplay">
+                        <source src="../sound.mp3" type="audio/mpeg">
+                        <source src="../sound.mp3" type="audio/mp3">
+                    </audio>
+
+                    <div class="btn btn-sm btn-triger" style="background-color: #4B4B4B;">
+                        <span style="cursor: pointer;" id="btn" onclick="myFunction(), audio.play()"
+                            class="d-flex justify-content-center align-items-center pl-1 pr-1 text-light">
+                            <i style="margin-top: 1px; font-size: 20px;" class="pr-2 bi bi-envelope-heart"></i>
+                            Buka Undangan
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="bg-pink" style="background-color: #FFF;">
+
+            <section id="text-wedd" class="d-flex justify-content-center">
+                <div class="Header" style="background-image: url('../BgLatarUtama.jpg');">
+
+                </div>
+            </section>
+            <section class="container" id="text-wedd">
+
+
+                <div class="d-flex justify-content-center">
+                    <div
+                        style="border-radius: 10px; margin-top: -100px; width: 95%; height: 510px; background-color: #4b4b4ba6;">
+                        <p class="text-center mt-4 text-light">
+                            The Wedding Of
+                        </p>
+                        <p class="preload-nama text-center text-light">
+                            <b style="font-size: 30px; font-family: 'Dancing Script', cursive;">Adi & Fitri</b>
+                        </p>
+                        <p style="margin-top: 10px;" class="text-center text-light">
+                            28 Mei 2026
+                        </p>
+
+                        <div></div>
+
+                        <div class="flower1">
+                            <img src="../flower-1.png" alt="">
+                        </div>
+
+                        <h2 id="teks" class="text-center text-light">
+                            <span id="days">00</span> : <span id="hours">00</span> : <span id="minutes">00</span> :
+                            <span id="seconds">00</span>
+                        </h2>
+                        <h4 class="teks-day text-center text-light" style="font-family: 'Dancing Script', cursive;">
+                            <span>D</span><span class="day">H</span><span class="day">M</span><span class="day">S</span>
+                        </h4>
+
+                        <div class="d-flex justify-content-center mt-4">
+                            <p style="font-size: 15px; width: 90%;" class="text-center text-light">
+                                "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri 
+                                agar kamu merasa tentram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian 
+                                itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir"
+                            </p>
+                        </div>
+
+                            <h4 class="teks-day text-center text-light" style="font-family: 'Dancing Script', cursive;">
+                                <span>Ar Rum : 21</span>
+                            </h4>
+
+                        <div class="flower2">
+                            <img src="../flower-2.png" alt="">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <!-- <img src="flower-removebg-preview.png" style="width: 100%; margin-top: -40px;" alt=""> -->
+            </section>
+
+            <section id="love-wedd" style="width: 100%; height: 1150px; background-color: #FFF;">
+                <div class="container">
+                    <div class="d-flex justify-content-center">
+                        <div class="bg-pink-mempelai-1" data-aos="fade-up" data-aos-delay="400"
+                            data-aos-duration="1000">
+
+                            <div>
+                                <h3 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200"
+                                    style="text-align: center; color: #FFF; padding-top: 30px; font-family: 'Dancing Script', cursive;">
+                                    Assalamualaikum Wr. Wb.
+                                </h3>
+                                <p style="margin-left: 10%; width: 80%; text-align: center; color: #FFF; padding-top: 20px; font-family: 'Roboto Slab', serif;" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400">
+                                    Untuk Mengikuti Sunnah Rasul-Mu Dalam Rangka Membentuk Keluarga Yang Sakinah, Mawaddah, Warahmah. 
+                                    Maka Ijinkanlah Kami Menikahkannya. Ya Allah Perkenankan Kami Merangkaikan Kasih Sayang Yang Kau Ciptakan Diantara Kami.
+                                </p>
+                            </div>
+
+                            <div class="mik-round d-flex justify-content-center" data-aos="fade-up" data-aos-delay="400"
+                                data-aos-duration="1200">
+                                <img src="../adi-removebg-preview.png" alt="">
+                            </div>
+
+                            <h3 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400"
+                                style="text-align: center; color: #FFF; margin-top: 20px; font-family: 'Dancing Script', cursive;">
+                                Adi Satrio
+                            </h3>
+                            <div class="d-flex justify-content-center">
+                                <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1600"
+                                    style="width: 80%; color: #FFF; margin-top: -5px; text-align: center; font-family: 'Roboto Slab', serif;">
+                                    Putra Bpk. Rustono & Ibu Sriyatun
+                                </p>
+                            </div>
+
+                            <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="1800"
+                                style="text-align: center; color: #FFF; margin-top: 25px; font-family: 'Dancing Script', cursive;">
+                                &
+                            </h1>
+
+                            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+                                class="selvi-round d-flex justify-content-center mt-4" style="border-radius: 100%;">
+                                <img src="../JitunRemoveBg.png" alt="">
+                            </div>
+
+                            <h3 data-aos="fade-up" data-aos-delay="400" data-aos-duration="2200"
+                                style="text-align: center; color: #FFF; margin-top: 20px; font-family: 'Dancing Script', cursive;">
+                                Fitri Hartatun
+                            </h3>
+                            <div class="d-flex justify-content-center">
+                                <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2400"
+                                    style="width: 80%; color: #FFF; margin-top: -5px; text-align: center; font-family: 'Roboto Slab', serif;">
+                                    Putri Bpk. Sohali (alm) & Ibu Karniti (almh)
+                                </p>
+                            </div>
+
+                            <div class="flower3">
+                                <img src="../flower-3.png" alt="">
+                            </div>
+
+
+                            <div class="flower4">
+                                <img src="../flower-4.png" alt="">
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div style="margin-top: 100px;">
+                    <!-- kdkqwnmd -->
+                </div>
+            </section>
+
+            <div
+                style="margin-top: 110px; background-image: url('../pink-watercolor-smudge-background.jpg'); height: 900px;">
+
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div
+                            style="border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; height: 220px; background-color: #4b4b4ba6;">
+
+                            <h2 data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"
+                                style="text-align: center; color: #FF8E9E; padding-top: 30px; font-family: 'Dancing Script', cursive;">
+                                Acara
+                            </h2>
+
+                            <div class="d-flex justify-content-center">
+                                <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="2200"
+                                    style="font-family: 'Roboto Slab', serif; width: 87%; font-size: 16px; color: #FFF; margin-top: 20px; text-align: center;">
+                                    Kami bermaksud untuk mengundang Bapak/Ibu, Saudara/(i) dalam acara pernikahan kami
+                                    pada :
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="col-sm-12">
+                        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1800"
+                            style="margin-top: 40px; border-radius: 10px; height: 270px; background-color: #FF8E9E;">
+
+                            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2200">
+                                <p
+                                    style="padding-top: 50px; font-family: 'Poppins', sans-serif; text-align: center; color: #FFF; font-weight: bold;">
+                                    Ramah Tamah
+                                </p>
+
+                                <div>
+                                    <div class="d-flex justify-content-center">
+                                        <p
+                                            style="font-family: 'Roboto Slab', serif; width: 80%; font-size: 16px; color: #FFF; text-align: center;">
+                                            Rabu 27, Mei 2026 <br>
+                                            08:00 - Selesai <br>
+                                            Rumah Mempelai wanita <br>
+                                            <!-- JL. Tomang Raya No.29. Grogol, Jakarta Barat -->
+                                        </p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <div class="btn btn-sm" style="cursor: pointer; background-color: #4B4B4B;">
+                                            <a href="https://maps.app.goo.gl/79C61WEgWCJod1cu8" target="_blank">
+                                                <span
+                                                    class="d-flex justify-content-center align-items-center pl-1 pr-1 text-light">
+                                                    <i style="font-size: 20px;" class="pr-2 bi bi-geo-alt"></i>
+                                                    Navigasi Map
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1800"
+                            style="margin-top: 40px; border-radius: 10px; height: 270px; background-color: #FF8E9E;">
+
+                            <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2200">
+                                <p
+                                    style="padding-top: 50px; font-family: 'Poppins', sans-serif; text-align: center; color: #FFF; font-weight: bold;">
+                                    Akad & Resepsi
+                                </p>
+
+                                <div>
+                                    <div class="d-flex justify-content-center">
+                                        <p
+                                            style="font-family: 'Roboto Slab', serif; width: 80%; font-size: 16px; color: #FFF; text-align: center;">
+                                            Kamis 28, Mei 2026 <br>
+                                            08:00 - Selesai <br>
+                                            Rumah Mempelai wanita <br>
+                                            <!-- JL. Tomang Raya No.29. Grogol, Jakarta Barat -->
+                                        </p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <div class="btn btn-sm" style="cursor: pointer; background-color: #4B4B4B;">
+                                            <a href="https://maps.app.goo.gl/79C61WEgWCJod1cu8" target="_blank">
+                                                <span
+                                                    class="d-flex justify-content-center align-items-center pl-1 pr-1 text-light">
+                                                    <i style="font-size: 20px;" class="pr-2 bi bi-geo-alt"></i>
+                                                    Navigasi Map
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>                    
+                </div>
+
+
+
+            </div>
+
+            <div style="background-color: #FFF; height: 800px;">
+
+                <section id="hadiah">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path> <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path> <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path> </svg>
+                    
+                    <div data-aos="zoom-in" data-aos-delay="400" data-aos-duration="2000">
+                        <h2
+                            style="text-align: center; color: #FF8E9E; padding-top: 35px; font-family: 'Dancing Script', cursive;">
+                            Hadiah
+                        </h2>
+
+                        <div class="d-flex justify-content-center">
+                            <div class="alerts alert-custom alert-dismissible fade show mt-4" role="alert">
+                                <p class="mt-2">
+                                    Kirimkan Hadiah kepada mempelai melalui QR Code ini.
+                                </p>
+                                <button type="button" class="close mt-3" data-dismiss="alert" aria-label="Close">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="2200"
+                        class="d-flex justify-content-center qr-bca">
+                        <img style="border: 5px solid #4b4b4ba6;" class="mt-2" src="../QrJitunNew.png" alt="">
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-4"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                        data-aos-duration="2200">
+
+                        <button onclick="copyDana()"
+                            class="btn btn-sm text-light"
+                            style="background-color: #4B4B4B; border-radius: 5px;">
+
+                            <i class="bi bi-copy mr-1"></i>
+                            Copy No. DANA
+
+                        </button>
+
+                    </div>
+
+                    <p id="copyNotif"
+                    class="text-center mt-2"
+                    style="display: none; color: #4B4B4B; font-size: 14px;">
+                        Nomor DANA berhasil disalin
+                    </p>                    
+
+                </section>
+            </div>
+            <div style="line-height: 0; transform: scaleY(-1);">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none"> <path class="elementor-shape-fill" opacity="0.33" d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z"></path> <path class="elementor-shape-fill" opacity="0.66" d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z"></path> <path class="elementor-shape-fill" d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z"></path> </svg>
+            </div>
+<div class="bg-pink-mempelai-image"
+                style="background-image: url('../pink-watercolor-smudge-background.jpg');">
+                <div class="container">
+
+                    <div data-aos="zoom-in" data-aos-delay="600" data-aos-duration="2400"
+                        class="d-flex justify-content-center">
+                        <div class="bg-pink-mempelai-2">
+
+                            <h2
+                                style="text-align: center; color: #FFF; padding-top: 30px; font-family: 'Dancing Script', cursive;">
+                                Adab Menghadiri Pernikahan
+                            </h2>
+
+                            <!-- <div class="d-flex justify-content-center">
+                                <p
+                                    style="font-family: 'Roboto Slab', serif; width: 80%; font-size: 16px; color: #FFF; text-align: center;">
+                                    Acara ini diselenggarakan dengan mematuhi protokol kesehatan. Semua tamu undangan
+                                    diwajibkan mematuhi Protokol Kesehatan ini.
+                                </p>
+
+                            </div> -->
+
+                            <div class="container">
+                                <div class="row mt-4 prokes">
+                                    <div class="col-md-12">
+                                        <div class="d-flex justify-content-center">
+                                            <!-- <img src="Wash-Hand.png" alt=""> -->
+                                             <div style="width: 50px;">
+                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-tshirt" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path style="fill: #FFF;" d="M631.2 96.5L436.5 0C416.4 27.8 371.9 47.2 320 47.2S223.6 27.8 203.5 0L8.8 96.5c-7.9 4-11.1 13.6-7.2 21.5l57.2 114.5c4 7.9 13.6 11.1 21.5 7.2l56.6-27.7c10.6-5.2 23 2.5 23 14.4V480c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V226.3c0-11.8 12.4-19.6 23-14.4l56.6 27.7c7.9 4 17.5.8 21.5-7.2L638.3 118c4-7.9.8-17.6-7.1-21.5z"></path></svg>
+                                             </div>
+                                        </div>
+                                        <span class="d-flex justify-content-center mt-2 text-center text-light font-weight-bold" style="font-size: 14px; font-family: 'Roboto Slab', serif;">
+                                            <b>Menggunakan pakaian sopan</b>
+                                        </span>
+                                        <!-- <br> -->
+                                        <span class="mt-1 d-flex justify-content-center text-center text-light" style="font-size: 11px; font-family: 'Roboto Slab', serif;">
+                                            Pakaian yang utama adalah mengikuti kebiasaan masyarakat dan menutup aurat
+                                        </span>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <div class="d-flex justify-content-center">
+                                             <div style="width: 50px;">
+                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-glass-cheers" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path style="fill: #FFF;" d="M639.4 433.6c-8.4-20.4-31.8-30.1-52.2-21.6l-22.1 9.2-38.7-101.9c47.9-35 64.8-100.3 34.5-152.8L474.3 16c-8-13.9-25.1-19.7-40-13.6L320 49.8 205.7 2.4c-14.9-6.2-32-.3-40 13.6L79.1 166.5C48.9 219 65.7 284.3 113.6 319.2L74.9 421.1l-22.1-9.2c-20.4-8.5-43.7 1.2-52.2 21.6-1.7 4.1.2 8.8 4.3 10.5l162.3 67.4c4.1 1.7 8.7-.2 10.4-4.3 8.4-20.4-1.2-43.8-21.6-52.3l-22.1-9.2L173.3 342c4.4.5 8.8 1.3 13.1 1.3 51.7 0 99.4-33.1 113.4-85.3l20.2-75.4 20.2 75.4c14 52.2 61.7 85.3 113.4 85.3 4.3 0 8.7-.8 13.1-1.3L506 445.6l-22.1 9.2c-20.4 8.5-30.1 31.9-21.6 52.3 1.7 4.1 6.4 6 10.4 4.3L635.1 444c4-1.7 6-6.3 4.3-10.4zM275.9 162.1l-112.1-46.5 36.5-63.4 94.5 39.2-18.9 70.7zm88.2 0l-18.9-70.7 94.5-39.2 36.5 63.4-112.1 46.5z"></path></svg>
+                                             </div>
+                                        </div>
+                                        <span class="d-flex justify-content-center mt-2 text-center text-light font-weight-bold" style="font-size: 14px; font-family: 'Roboto Slab', serif;">
+                                            <b>Adab Makan dan Minum</b>
+                                        </span>
+                                        <!-- <br> -->
+                                        <span class="mt-1 d-flex justify-content-center text-center text-light" style="font-size: 11px; font-family: 'Roboto Slab', serif;">
+                                            Makan dan minum dengan duduk, mengucap basmallah, menggunakan tangan kanan, mendahulukan yang dekat, serta tidak membuang - buang makanan                                    </span>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <div class="d-flex justify-content-center">
+                                             <div style="width: 50px;">
+                                                <svg aria-hidden="true" class="e-font-icon-svg e-fas-hands" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path style="fill: #FFF;" d="M204.8 230.4c-10.6-14.1-30.7-17-44.8-6.4-14.1 10.6-17 30.7-6.4 44.8l38.1 50.8c4.8 6.4 4.1 15.3-1.5 20.9l-12.8 12.8c-6.7 6.7-17.6 6.2-23.6-1.1L64 244.4V96c0-17.7-14.3-32-32-32S0 78.3 0 96v218.4c0 10.9 3.7 21.5 10.5 30l104.1 134.3c5 6.5 8.4 13.9 10.4 21.7 1.8 6.9 8.1 11.6 15.3 11.6H272c8.8 0 16-7.2 16-16V384c0-27.7-9-54.6-25.6-76.8l-57.6-76.8zM608 64c-17.7 0-32 14.3-32 32v148.4l-89.8 107.8c-6 7.2-17 7.7-23.6 1.1l-12.8-12.8c-5.6-5.6-6.3-14.5-1.5-20.9l38.1-50.8c10.6-14.1 7.7-34.2-6.4-44.8-14.1-10.6-34.2-7.7-44.8 6.4l-57.6 76.8C361 329.4 352 356.3 352 384v112c0 8.8 7.2 16 16 16h131.7c7.1 0 13.5-4.7 15.3-11.6 2-7.8 5.4-15.2 10.4-21.7l104.1-134.3c6.8-8.5 10.5-19.1 10.5-30V96c0-17.7-14.3-32-32-32z"></path></svg>
+                                             </div>
+                                        </div>
+                                        <span class="d-flex justify-content-center mt-2 text-center text-light font-weight-bold" style="font-size: 14px; font-family: 'Roboto Slab', serif;">
+                                            <b>Mendoakan Pengantin</b>
+                                        </span>
+                                        <!-- <br> -->
+                                        <span class="mt-1 d-flex justify-content-center text-center text-light" style="font-size: 11px; font-family: 'Roboto Slab', serif;">
+                                            Sebagaimana Rasulullah SAW mengucapkan selamat kepada seseorang yang telah menikah kemudian mendoakan " Baarakallahu laka wa baaraka 'alaika wa jama'a bainakumaa fii khoir "                              </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <div>
+                        <h2 data-aos="fade-up" data-aos-duration="1000"
+                            style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
+                            Our Happy Moment
+                        </h2>
+                    </div>
+
+                    <section id="image-wedd" class="gallery pt-5">
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-1.jpeg" data-lightbox='mygallery' data-title="Our Moment">
+                            <img src="wedding-1.jpeg">
+                        </a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-2.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-2.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-3.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-3.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-4.jpeg" data-lightbox='mygallery'><imag
+                                src="wedding-4.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-5.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-5.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-6.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-6.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-7.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-7.jpeg"></a>
+                        
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-8.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-8.jpeg"></a>
+                        <a data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000"
+                            href="wedding-9.jpeg" data-lightbox='mygallery'><img
+                                src="wedding-9.jpeg"></a>
+                    </section> -->
+                 
+                </div>
+                <section id="doa-wedd">
+                                <div class="container">
+                                        <div class="d-flex justify-content-center">
+                                            <div style="width: 83%;">
+                                                <h2 data-aos="fade-up" data-aos-duration="1000"
+                                                    style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
+                                                    Ucapan & Doa
+                                                </h2>
+
+                                                <div class="d-none my-alert alert alert-success alert-dismissible fade show" role="alert">
+                                                    <strong>Terimakasih</strong> Ucapan & doa Anda telah terkirim.
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+
+                                                <form name="ucapan-tamu" class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                                    <input value="Mas Utsman" name="nama" type="text" class="feedback-input" placeholder="Name" required />
+                                                    <textarea name="pesan" class="feedback-input"
+                                                        placeholder="Tulis ucapan & doa" required></textarea>
+                                                    <button type="submit" value="Kirim Ucapan" class="btn-kirim"><i class="bi bi-chat-heart mr-1"></i> Kirim
+                                                        Ucapan</button>
+                                                    <button type="submit" style="background-color: #CC6666; margin-top: 10px;" class="btn-loading d-none btn btn-primary" disabled>
+                                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                        Loading...
+                                                    </button>                                        
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                                <h2 data-aos="fade-up" data-aos-duration="1000"
+                                                    style="text-align: center; color: #FFF; font-family: 'Dancing Script', cursive;">
+                                                    Daftar Ucapan
+                                                </h2>
+
+<div id="wrapper-ucapan" class="justify-content-center mt-4" style="padding-bottom: 8rem; display: none;">
+    
+    <div class="section-ucapan">
+
+        <div class="scroll-wrapper">
+
+            <div id="list-ucapan" class="scroll-custom-ucapan">
+
+            </div>
+
+            <div class="scroll-indicator"></div>
+
+        </div>
+
+    </div>
+
+</div>                               
+                </section>
+            </div>
+
+        </div>
+
+<audio class="d-none" loop id="autoplay">
+    <source src="../sound.mp3" type="audio/mpeg">
+</audio>
+
+        <div class="music-floating" data-aos="zoom-in">
+            <i class="bi bi-volume-up-fill music-player"></i>
+        </div>
+
+        <div class="head_floating" data-aos="zoom-in">
+            <nav class="navigation_floating">
+                <ul class="navigation_menu_floating">
+                    <li class="navigation_menu_element_floating">
+                        <a class="aktif" href="#text-wedd"><i class="bi bi-file-earmark-text"></i></a>
+                    </li>
+                    <li class="navigation_menu_element_floating">
+                        <a href="#love-wedd"><i class="bi bi-heart"></i></a>
+                    </li>
+                    <li class="navigation_menu_element_floating">
+                        <a href="#hadiah"><i class="bi bi-gift"></i></a>
+                    </li>
+                    <!-- <li class="navigation_menu_element_floating">
+                        <a href="#image-wedd"><i class="bi bi-images"></i></a>
+                    </li> -->
+                    <li class="navigation_menu_element_floating">
+                        <a href="#doa-wedd"><i class="bi bi-chat-quote"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>      
+    </div>
+
+    <!-- <div class="clients-slider swiper mt-4" data-aos="zoom-out">
+        <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="bg-wedd-1.png" alt=""></div>
+            <div class="swiper-slide"><img src="bg-wedd-2.jpeg" alt=""></div>
+            <div class="swiper-slide"><img
+                    src="depositphotos_8962606-stock-photo-beautiful-wedding-background-with-roses.jpg"
+                    alt=""></div>
+            <div class="swiper-slide"><img src="flower-1.png" alt="">
+            </div>
+            <div class="swiper-slide"><img src="flower-2.png" alt=""></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2022-12-18 at 13.12.07.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2022-12-18 at 13.12.06.jpeg" alt=""></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2022-12-18 at 13.12.05.jpeg" alt=""></div>
+        </div>
+    </div> -->
+
+
+    <script>
+        const audio = new Audio();
+        audio.src = "../sound.mp3";
+
+        let myDocument = document.documentElement;
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            if (myDocument.requestFullscreen) {
+                myDocument.requestFullscreen()
+            } else if (myDocument.msRequestFullscreen) {
+                myDocument.msRequestFullscreen();
+            } else if (myDocument.mozRequestFullscreen) {
+                myDocument.mozRequestFullscreen();
+            } else if (myDocument.webkitRequestFullscreen) {
+                myDocument.webkitRequestFullscreen();
+            }
+        })
+
+        function myFunction() {
+            document.getElementById("close").style.display = "none";
+        }
+
+        // function Fungsi() {
+        //     document.getElementById("open").style.display = "block";
+        // }
+
+        // function activate(ele) {
+        //     If(ele.requestFullscreen){
+        //         ele.requestFullscreen
+        //     }
+        // }   
+
+const musicFloating = document.querySelector(".music-floating");
+const musicIcon = document.querySelector(".music-floating i");
+
+musicFloating.addEventListener("click", () => {
+
+    if (audio.paused) {
+
+        // PLAY MUSIC
+        audio.play();
+
+        // GANTI ICON PLAY
+        musicIcon.classList.remove("bi-volume-mute-fill");
+        musicIcon.classList.add("bi-volume-up-fill");
+
+    } else {
+
+        // STOP MUSIC
+        audio.pause();
+
+        // GANTI ICON MUTE
+        musicIcon.classList.remove("bi-volume-up-fill");
+        musicIcon.classList.add("bi-volume-mute-fill");
+
+    }
+
+});
+
+function copyDana() {
+
+    const nomorDana = "087733255428";
+
+    navigator.clipboard.writeText(nomorDana)
+        .then(() => {
+
+            const notif = document.getElementById("copyNotif");
+
+            notif.style.display = "block";
+
+            setTimeout(() => {
+                notif.style.display = "none";
+            }, 2000);
+
+        })
+        .catch(err => {
+            console.log("Gagal copy:", err);
+        });
+
+};
+
+
+    </script>
+
+    <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwMYS8pr_JRB8JoXTDnE3Xtdv9VLtit-FPHJfB1EFiYQMJMciyQ1g2lUm2tzK-djyqS/exec';
+
+const form = document.forms['ucapan-tamu'];
+
+const BtnKirim = document.querySelector(".btn-kirim");
+const BtnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    // tampilkan loading
+    BtnLoading.classList.remove("d-none");
+    BtnKirim.classList.add("d-none");
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+
+    .then(response => {
+
+        // sembunyikan loading
+        BtnLoading.classList.add("d-none");
+        BtnKirim.classList.remove("d-none");
+
+        // tampilkan alert
+        myAlert.classList.remove("d-none");
+
+        // reset form
+        form.reset();
+
+        loadUcapan();        
+
+        console.log('Success!', response);
+
+        // hilangkan alert setelah 3 detik
+        setTimeout(() => {
+            myAlert.classList.add("d-none");
+        }, 3000);
+
+    })
+
+    .catch(error => {
+
+        BtnLoading.classList.add("d-none");
+        BtnKirim.classList.remove("d-none");
+
+        console.error('Error!', error.message);
+
+        alert("Gagal mengirim ucapan");
+
+    });
+
+});
+    </script>
+
+<script>
+
+const urlGetUcapan = "https://script.google.com/macros/s/AKfycbwMYS8pr_JRB8JoXTDnE3Xtdv9VLtit-FPHJfB1EFiYQMJMciyQ1g2lUm2tzK-djyqS/exec";
+
+function loadUcapan() {
+
+    fetch(urlGetUcapan)
+    .then(response => response.json())
+    .then(data => {
+
+        const listUcapan = document.getElementById("list-ucapan");
+        const wrapperUcapan = document.getElementById("wrapper-ucapan");
+
+        listUcapan.innerHTML = "";
+
+        // FILTER DATA KOSONG
+        data = data.filter(item => item.nama || item.pesan);
+
+        // JIKA TIDAK ADA UCAPAN
+        if(data.length === 0){
+
+            wrapperUcapan.classList.remove("d-flex");
+            return;
+
+        }
+
+        // JIKA ADA UCAPAN
+        wrapperUcapan.style.display = "flex";
+        wrapperUcapan.classList.add("d-flex");
+
+        data.reverse().forEach(item => {
+
+            const tanggal = new Date(item.timestamp);
+
+            const tanggalFormat = tanggal.toLocaleDateString('id-ID', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            const jamFormat = tanggal.toLocaleTimeString('id-ID', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            const formatTanggal = `${tanggalFormat} • ${jamFormat} WIB`;
+
+            listUcapan.innerHTML += `
+            
+                <div class="section-ucapan-text">
+
+                    <h5 class="section-ucapan-nama-tamu">
+                        ${item.nama}
+                    </h5>
+
+                    <p class="section-ucapan-tanggal text-light">
+                        ${formatTanggal}
+                    </p>
+
+                    <p class="section-ucapan-tamu text-light">
+                        ${item.pesan}
+                    </p>
+
+                </div>
+            
+            `;
+
+        });
+
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+}
+
+// LOAD PERTAMA KALI
+loadUcapan();
+
+</script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script src="../countdown.js"></script>
+    <script src="../scrollspy.js"></script>
+
+</body>
+
+</html>
