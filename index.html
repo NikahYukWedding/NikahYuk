@@ -645,31 +645,36 @@ function copyDana() {
     </script>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwdkT9JtOSD2q35-Fv0EzG5HcWAdb_57-DwJVU3GsallM-5Yqz1105QUgcOORCt_2GrOg/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwdkT9JtOSD2q35-Fv0EzG5HcWAdb_57-DwJVU3GsallM-5Yqz1105QUgcOORCt_2GrOg/exec';
+        
         const form = document.forms['ucapan-tamu'];
-        const btnKirim = document.querySelector('.btn-kirim');
-        const btnLoading = document.querySelector('.btn-loading');
-        const myAlert = document.querySelector('.my-alert');
-
+        
         form.addEventListener('submit', e => {
-            e.preventDefault()
-            // ketika tombol submit di klik
-            // tampilkan tombol loading hilangkan tombol kirim
-            btnLoading.classList.toggle('d-none');
-            btnKirim.classList.toggle('d-none');
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    // tampilkan tombol kirim, hilangkan tombol loading
-                    btnLoading.classList.toggle('d-none');
-                    btnKirim.classList.toggle('d-none');
-                    // tampilkan alert
-                    myAlert.classList.toggle('d-none');
-                    // reset formnya
-                    form.reset();
-                    console.log('Success!', response)
-                })
-                .catch(error => console.error('Error!', error.message))
-        })
+        
+            e.preventDefault();
+        
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+        
+                alert("Ucapan berhasil dikirim!");
+        
+                form.reset();
+        
+                console.log('Success!', response);
+        
+            })
+            .catch(error => {
+        
+                console.error('Error!', error.message);
+        
+                alert("Gagal mengirim ucapan");
+        
+            });
+        
+        });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
