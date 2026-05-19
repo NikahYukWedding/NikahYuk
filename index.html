@@ -488,25 +488,58 @@
                     </section> -->
                  
                 </div>
-<section id="doa-wedd">
-                   <div class="container" style="padding-bottom: 20rem;">
-                        <div class="d-flex justify-content-center">
-                            <div style="width: 83%;">
-                                <h2 data-aos="fade-up" data-aos-duration="1000"
-                                    style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
-                                    Ucapan & Doa
-                                </h2>
-                                <form name="ucapan-tamu" class="mt-4" data-aos="fade-up" data-aos-duration="1500">
-                                    <input name="nama" type="text" class="feedback-input" placeholder="Name" />
-                                    <textarea name="pesan" class="feedback-input"
-                                        placeholder="Tulis ucapan & doa"></textarea>
-                                    <button type="submit" value="Kirim Ucapan"><i class="bi bi-chat-heart mr-1"></i> Kirim
-                                        Ucapan</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-</section>
+                <section id="doa-wedd">
+                                <div class="container">
+                                        <div class="d-flex justify-content-center">
+                                            <div style="width: 83%;">
+                                                <h2 data-aos="fade-up" data-aos-duration="1000"
+                                                    style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
+                                                    Ucapan & Doa
+                                                </h2>
+
+                                                <div class="d-none my-alert alert alert-success alert-dismissible fade show" role="alert">
+                                                    <strong>Terimakasih</strong> Ucapan & doa Anda telah terkirim.
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+
+                                                <form name="ucapan-tamu" class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                                    <input value="ARA" name="nama" type="text" class="feedback-input" placeholder="Name" required />
+                                                    <textarea name="pesan" class="feedback-input"
+                                                        placeholder="Tulis ucapan & doa" required></textarea>
+                                                    <button type="submit" value="Kirim Ucapan" class="btn-kirim"><i class="bi bi-chat-heart mr-1"></i> Kirim
+                                                        Ucapan</button>
+                                                    <button type="submit" style="background-color: #CC6666; margin-top: 10px;" class="btn-loading d-none btn btn-primary" disabled>
+                                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                        Loading...
+                                                    </button>                                        
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                                <h2 data-aos="fade-up" data-aos-duration="1000"
+                                                    style="text-align: center; color: #FFF; font-family: 'Dancing Script', cursive;">
+                                                    Daftar Ucapan
+                                                </h2>
+
+<div id="wrapper-ucapan" class="justify-content-center mt-4" style="padding-bottom: 8rem; display: none;">
+    
+    <div class="section-ucapan">
+
+        <div class="scroll-wrapper">
+
+            <div id="list-ucapan" class="scroll-custom-ucapan">
+
+            </div>
+
+            <div class="scroll-indicator"></div>
+
+        </div>
+
+    </div>
+
+</div>                               
+                </section>
             </div>
 
         </div>
@@ -645,37 +678,144 @@ function copyDana() {
     </script>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwdkT9JtOSD2q35-Fv0EzG5HcWAdb_57-DwJVU3GsallM-5Yqz1105QUgcOORCt_2GrOg/exec';
-        
-        const form = document.forms['ucapan-tamu'];
-        
-        form.addEventListener('submit', e => {
-        
-            e.preventDefault();
-        
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form)
-            })
-            .then(response => {
-        
-                alert("Ucapan berhasil dikirim!");
-        
-                form.reset();
-        
-                console.log('Success!', response);
-        
-            })
-            .catch(error => {
-        
-                console.error('Error!', error.message);
-        
-                alert("Gagal mengirim ucapan");
-        
-            });
-        
-        });
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwMYS8pr_JRB8JoXTDnE3Xtdv9VLtit-FPHJfB1EFiYQMJMciyQ1g2lUm2tzK-djyqS/exec';
+
+const form = document.forms['ucapan-tamu'];
+
+const BtnKirim = document.querySelector(".btn-kirim");
+const BtnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    // tampilkan loading
+    BtnLoading.classList.remove("d-none");
+    BtnKirim.classList.add("d-none");
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+
+    .then(response => {
+
+        // sembunyikan loading
+        BtnLoading.classList.add("d-none");
+        BtnKirim.classList.remove("d-none");
+
+        // tampilkan alert
+        myAlert.classList.remove("d-none");
+
+        // reset form
+        form.reset();
+
+        loadUcapan();        
+
+        console.log('Success!', response);
+
+        // hilangkan alert setelah 3 detik
+        setTimeout(() => {
+            myAlert.classList.add("d-none");
+        }, 3000);
+
+    })
+
+    .catch(error => {
+
+        BtnLoading.classList.add("d-none");
+        BtnKirim.classList.remove("d-none");
+
+        console.error('Error!', error.message);
+
+        alert("Gagal mengirim ucapan");
+
+    });
+
+});
     </script>
+
+<script>
+
+const urlGetUcapan = "https://script.google.com/macros/s/AKfycbwMYS8pr_JRB8JoXTDnE3Xtdv9VLtit-FPHJfB1EFiYQMJMciyQ1g2lUm2tzK-djyqS/exec";
+
+function loadUcapan() {
+
+    fetch(urlGetUcapan)
+    .then(response => response.json())
+    .then(data => {
+
+        const listUcapan = document.getElementById("list-ucapan");
+        const wrapperUcapan = document.getElementById("wrapper-ucapan");
+
+        listUcapan.innerHTML = "";
+
+        // FILTER DATA KOSONG
+        data = data.filter(item => item.nama || item.pesan);
+
+        // JIKA TIDAK ADA UCAPAN
+        if(data.length === 0){
+
+            wrapperUcapan.classList.remove("d-flex");
+            return;
+
+        }
+
+        // JIKA ADA UCAPAN
+        wrapperUcapan.style.display = "flex";
+        wrapperUcapan.classList.add("d-flex");
+
+        data.reverse().forEach(item => {
+
+            const tanggal = new Date(item.timestamp);
+
+            const tanggalFormat = tanggal.toLocaleDateString('id-ID', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            });
+
+            const jamFormat = tanggal.toLocaleTimeString('id-ID', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            const formatTanggal = `${tanggalFormat} • ${jamFormat} WIB`;
+
+            listUcapan.innerHTML += `
+            
+                <div class="section-ucapan-text">
+
+                    <h5 class="section-ucapan-nama-tamu">
+                        ${item.nama}
+                    </h5>
+
+                    <p class="section-ucapan-tanggal text-light">
+                        ${formatTanggal}
+                    </p>
+
+                    <p class="section-ucapan-tamu text-light">
+                        ${item.pesan}
+                    </p>
+
+                </div>
+            
+            `;
+
+        });
+
+    })
+    .catch(error => {
+        console.log(error);
+    });
+
+}
+
+// LOAD PERTAMA KALI
+loadUcapan();
+
+</script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
