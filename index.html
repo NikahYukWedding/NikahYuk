@@ -489,62 +489,23 @@
                  
                 </div>
 <section id="doa-wedd">
-    <div class="container" style="padding-bottom: 20rem;">
-
-        <div class="d-flex justify-content-center">
-
-            <div style="width: 83%;">
-
-                <h2
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
-
-                    Ucapan & Doa
-
-                </h2>
-
-                <form id="formUcapan"
-                    class="mt-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1500">
-
-                    <input
-                        id="nama"
-                        name="name"
-                        type="text"
-                        class="feedback-input"
-                        placeholder="Name"
-                        required />
-
-                    <textarea
-                        id="ucapan"
-                        name="text"
-                        class="feedback-input"
-                        placeholder="Tulis ucapan & doa"
-                        required></textarea>
-
-                    <button type="submit">
-
-                        <i class="bi bi-chat-heart mr-1"></i>
-                        Kirim Ucapan
-
-                    </button>
-
-                </form>
-
-                <p id="notifUcapan"
-                    style="display: none; color: #FFF; text-align: center; margin-top: 15px;">
-
-                    Ucapan berhasil dikirim
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+                   <div class="container" style="padding-bottom: 20rem;">
+                        <div class="d-flex justify-content-center">
+                            <div style="width: 83%;">
+                                <h2 data-aos="fade-up" data-aos-duration="1000"
+                                    style="text-align: center; color: #FFF; padding-top: 50px; font-family: 'Dancing Script', cursive;">
+                                    Ucapan & Doa
+                                </h2>
+                                <form name="ucapan-tamu" class="mt-4" data-aos="fade-up" data-aos-duration="1500">
+                                    <input name="nama" type="text" class="feedback-input" placeholder="Name" />
+                                    <textarea name="pesan" class="feedback-input"
+                                        placeholder="Tulis ucapan & doa"></textarea>
+                                    <button type="submit" value="Kirim Ucapan"><i class="bi bi-chat-heart mr-1"></i> Kirim
+                                        Ucapan</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 </section>
             </div>
 
@@ -680,61 +641,35 @@ function copyDana() {
 
 };
 
-$("#formUcapan").submit(function (e) {
 
-        e.preventDefault();
+    </script>
 
-        var nama = $("#nama").val();
-        var ucapan = $("#ucapan").val();
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwdkT9JtOSD2q35-Fv0EzG5HcWAdb_57-DwJVU3GsallM-5Yqz1105QUgcOORCt_2GrOg/exec'
+        const form = document.forms['ucapan-tamu']
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert');
 
-        var settings = {
-
-            "url": "https://aplikasi-big.com/KbBelajarExploreJavaMySQL/rest/procInsertUcapanTamu",
-
-            "method": "POST",
-
-            "timeout": 0,
-
-            "headers": {
-                "Content-Type": "application/json"
-            },
-
-            "data": JSON.stringify({
-                "Nama": nama,
-                "Ucapan": ucapan
-            }),
-
-        };
-
-        $.ajax(settings)
-
-            .done(function (response) {
-
-                console.log(response);
-
-                $("#notifUcapan").fadeIn();
-
-                $("#formUcapan")[0].reset();
-
-                setTimeout(function () {
-
-                    $("#notifUcapan").fadeOut();
-
-                }, 3000);
-
-            })
-
-            .fail(function (xhr, status, error) {
-
-                console.log(error);
-
-                alert("Gagal mengirim ucapan");
-
-            });
-
-    });
-
-
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            // ketika tombol submit di klik
+            // tampilkan tombol loading hilangkan tombol kirim
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    // tampilkan alert
+                    myAlert.classList.toggle('d-none');
+                    // reset formnya
+                    form.reset();
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
